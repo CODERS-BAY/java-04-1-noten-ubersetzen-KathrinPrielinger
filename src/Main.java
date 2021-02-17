@@ -4,18 +4,9 @@ public class Main {
     public static void main(String[] args) {
 
         //Noten übersetzen
-
         //Schreibe ein Programm, dass eine Schulnote in numerischer Form (1-5) in seine textuelle Form übersetzt:
 
-        //Bei einer 1 wird "Sehr gut" auf die Konsole geschrieben
-        //Bei einer 2 wird "Gut" auf die Konsole geschrieben
-        //Bei einer 3 wird "Befriedigend" auf die Konsole geschrieben
-        //Bei einer 4 wird "Genügend" auf die Konsole geschrieben
-        //Bei einer 5 wird "Nicht Gengügend" auf die Konsole geschrieben
-
-
-
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
 
         System.out.println(number);
@@ -23,6 +14,21 @@ public class Main {
         String[] grades = {"Sehr gut", "Gut", "Befriedigend", "Genügend", "Nicht genügend"};
 
         System.out.println("Meine Note in textueller Form: " + grades[number - 1] + ".");
+        */
 
+        Scanner scanner = new Scanner(System.in);
+        int grade = scanner.nextInt();
+
+        System.out.println(grade);
+
+
+        switch (grade) {
+            case 1 -> System.out.println(grade + ": " + "Sehr gut");
+            case 2 -> System.out.println(grade + ": " + "Gut");
+            case 3 -> System.out.println(grade + ": " + "Befriedigend");
+            case 4 -> System.out.println(grade + ": " + "Genügend");
+            case 5 -> System.out.println(grade + ": " + "Nicht genügend");
+            default -> System.out.println("Keine gültige Eingabe.");
+        }
     }
 }
